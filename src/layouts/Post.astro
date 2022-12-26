@@ -1,0 +1,16 @@
+---
+export type Props = LayoutProps;
+
+import type { Props as LayoutProps } from "./Layout.astro";
+
+import Layout from "./Layout.astro";
+---
+
+<Layout title={Astro.props.title}>
+  <nav class="p-2">
+    <a href="/" class="text-sm text-slate-600">Back to oeb25.github.io</a>
+  </nav>
+  <article class="prose mx-auto w-full max-w-prose">
+    <slot />
+  </article>
+</Layout>
